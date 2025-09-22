@@ -30,7 +30,7 @@
   height: 25rem;
 }
 
-.welcome_picture_open{
+.open{
   position: absolute;
   width: 25rem;
   height: 25rem;
@@ -111,7 +111,7 @@
 }
 .projects_section {
   height: 30rem;
-  margin: 5rem 0;
+  margin: rem 0;
 }
 
 .projects_content{

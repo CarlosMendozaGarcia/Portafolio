@@ -147,8 +147,8 @@ export default function Home() {
               />
             </div>
             <div
-              className={`${styles.welcome_picture}${
-                isAnimating ? "_open" : ""
+              className={`${
+                isAnimating ? styles.open : styles.welcome_picture
               }`}
             >
               <Image
