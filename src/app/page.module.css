@@ -1,12 +1,177 @@
-.welcome_section{
+
+.welcome_section {
+  height: 30rem;
+  margin: 5rem 0;
+}
+
+.welcome_content {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.welcome_profile_picture {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+}
+
+.welcome_background {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  filter: grayscale(90%) blur(2px);
+}
+.welcome_picture {
+  position: absolute;
+  transform: translate(1rem, 1rem);
+  width: 25rem;
+  height: 25rem;
+}
+
+.welcome_picture_open{
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  animation: fadeIn 2s forwards normal;
+}
+
+.decorator_1{
+  position: absolute;
+  z-index: 1;
+  transform: translate(24rem, -1rem)
+}
+.decorator_2{
+  position: absolute;
+  z-index: 1;
+  transform: translate(-1rem, 24rem)
+}
+
+.welcome_profile_info {
+  display:flex;
+  flex-direction: column;
+  gap:1rem;
+  flex-wrap: wrap;
+  width: 50%;
+  font-size: x-large;
+  color:#0d1b2a;
+}
+
+.contact{
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.contacts_button{
+  min-width: 10rem;
+  gap:10px;
+  display:flex;
+  border: 2px solid #0d1b2a;
+  border-radius: 1rem;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  align-items: center;
+}
+
+.technologies_section {
+  height: 30rem;
+  margin: 5rem 0;
+}
+
+.technologies_content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.technologies_view{
+  width: 80%;
+  background:#e0e0e0 ;
+  color:#0d1b2a;
+  border-radius: 1rem;
+  padding: 2rem;
+  display:flex;
+  flex-grow: 0.8;
+  gap: 5rem;
+}
+
+.technologies_card{
+  border: 2px solid #0d1b2a;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  width:100%
+}
+.projects_section {
+  height: 30rem;
+  margin: 5rem 0;
+}
+
+.projects_content{
+  height: 100%;
+  display:Flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.accordion {
+  display:flex;
+  position: relative;
+  height: 90%;
+  width: 50%;
+  justify-content: center;
+}
+
+.prev_project {
+  position:absolute;
+  z-index: 1;
+  transform: translate(-14rem, 0);
+  filter: blur(1px);
+  ;
+}
+
+.current_project{
+  position: absolute;
+  z-index:2;
 
 }
-.Aboutme_section{
-  
+.next_project {
+  position:absolute;
+  z-index: 1;
+  transform: translate(14rem, 0);
+  filter: blur(1px);
 }
-.Technologies_section{
-  
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+    filter: blur(2px) grayscale(90%);
+    transform: translate(0rem, 0rem);
+  }
+
+  100% {
+    opacity: 1;
+    filter:blur(0px) grayscale(0%);
+    transform: translate(1rem, 1rem);
+  }
 }
-.Projects_section{
-  
+
+@keyframes nextProject{
+  0%{
+    z-index:1;
+    transform: translate(14rem, 0);
+  }
+  100%{
+    z-index:2;
+    transform: translate(0, 0);
+  }
 }
