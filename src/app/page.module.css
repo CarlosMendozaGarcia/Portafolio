@@ -23,6 +23,7 @@
   height: 25rem;
   filter: grayscale(90%) blur(2px);
 }
+
 .welcome_picture {
   position: absolute;
   transform: translate(1rem, 1rem);

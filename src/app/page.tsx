@@ -4,9 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "./page.module.css";
 
-import {ProjectStatus} from "../data/projectStatus";
+import { ProjectStatus } from "../data/projectStatus";
 import CardProject from "../components/cardProject";
-
 
 export default function Home() {
   const [currentPicture, setCurrentPicture] = useState(0);
@@ -119,14 +118,14 @@ export default function Home() {
       title: "PriceHive",
       img: "/PriceHive.png",
       resume: "",
-      url:"https://github.com/CarlosMendozaGarcia/PriceHive-Parcial-FrontEnd",
+      url: "https://github.com/CarlosMendozaGarcia/PriceHive-Parcial-FrontEnd",
       state: "Arreglos" as ProjectStatus,
     },
     {
       title: "Carpool",
       img: "/Carpool.png",
       resume: "lorem ipsum",
-      url:"",
+      url: "",
       state: "Completado" as ProjectStatus,
     },
   ];
@@ -147,8 +146,8 @@ export default function Home() {
               />
             </div>
             <div
-              className={`${
-                isAnimating ? styles.open : styles.welcome_picture
+              className={`${styles.welcome_picture} ${
+                isAnimating ? styles.open : ""
               }`}
             >
               <Image
@@ -314,7 +313,10 @@ export default function Home() {
                 }
               />
             </div>
-            <a href={Projects[currentProject].url} className={styles.current_project}>
+            <a
+              href={Projects[currentProject].url}
+              className={styles.current_project}
+            >
               <CardProject
                 title={Projects[currentProject].title}
                 img={Projects[currentProject].img}
