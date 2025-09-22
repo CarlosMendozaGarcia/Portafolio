@@ -103,28 +103,28 @@ export default function Home() {
     {
       title: "InmueblesSA",
       img: "/InmueblesSA.png",
-      resume: "lorem ipsum",
+      resume: "Sitio web dinamico para suplir las labores basicas de un centro inmoniliario, junto a un buscador flexible con filtros. Desarrollado con next.js, mongodb/moongose y express",
       url: "https://github.com/CarlosMendozaGarcia/InmueblesSA",
       state: "Completado" as ProjectStatus,
     },
     {
       title: "Connectlatam",
       img: "/ConnectLatam.png",
-      resume: "lorem ipsum",
+      resume: "Sitio web dedicado al manejo de noticias, proyectos y tutoriales de un Voting Team de la Banda de K-Pop Enhypen. Desarrollado react, moongose, express",
       url: "https://github.com/CarlosMendozaGarcia/ConnectLatam",
       state: "En progreso" as ProjectStatus,
     },
     {
       title: "PriceHive",
       img: "/PriceHive.png",
-      resume: "",
+      resume: "Sitio web dinamico basado en la recolección de productos (webscrapping) y clasificación segun  el supermercado proveniente. Desarrollado con HTML+CSS, Vite, Express, Playwright",
       url: "https://github.com/CarlosMendozaGarcia/PriceHive-Parcial-FrontEnd",
       state: "Arreglos" as ProjectStatus,
     },
     {
       title: "Carpool",
       img: "/Carpool.png",
-      resume: "lorem ipsum",
+      resume: "Aplicación movil basada en servicio de vehiculo compartido. Facilita la relación usuario-conductor. Desarrollado con Flutterflow, FireBase ",
       url: "",
       state: "Completado" as ProjectStatus,
     },
@@ -161,16 +161,14 @@ export default function Home() {
               <Image
                 src={pictures[currentPicture].decorator.src}
                 alt={pictures[currentPicture].decorator.alt}
-                width={50}
-                height={50}
+                fill
               />
             </div>
             <div className={styles.decorator_2}>
               <Image
                 src={pictures[currentPicture].decorator.src}
                 alt={pictures[currentPicture].decorator.alt}
-                width={50}
-                height={50}
+                fill
               />
             </div>
           </div>
@@ -186,26 +184,27 @@ export default function Home() {
                 href="https://github.com/CarlosMendozaGarcia"
                 className={styles.contacts_button}
               >
-                <Image src="/github.png" alt="github" width={50} height={50} />
+                <div className={styles.contactLogo}>
+                  <Image src="/github.png" alt="github" fill />
+                </div>
                 <p>Github</p>
               </a>
               <a
                 href="https://www.linkedin.com/in/carlos-andres-mendoza-garcia-7023412b3/"
                 className={styles.contacts_button}
               >
-                <Image
-                  src="/linkedin.png"
-                  alt="github"
-                  width={50}
-                  height={50}
-                />
+                <div className={styles.contactLogo}>
+                  <Image src="/linkedin.png" alt="github" fill />
+                </div>
                 <p>Linkedin</p>
               </a>
               <a
                 href="mailto:carlosmendozagarcia30@gmail.com"
                 className={styles.contacts_button}
               >
-                <Image src="/email.png" alt="github" width={50} height={50} />
+                <div className={styles.contactLogo}>
+                  <Image src="/email.png" alt="github" fill />
+                </div>
                 <p>Email</p>
               </a>
             </div>

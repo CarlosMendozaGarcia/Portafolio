@@ -9,7 +9,6 @@ type CardProjectProps = {
   state: ProjectStatus;
 };
 
-
 export default function CardProject({
   title,
   img,
@@ -18,18 +17,29 @@ export default function CardProject({
 }: CardProjectProps) {
   return (
     <div className={styles.projectcard}>
-      <Image
-        src={img}
-        alt={title}
-        height={250}
-        width={300}
-        style={{ borderRadius: "1rem" , objectFit:"cover"}}
-      />
-      <div className={styles.mainInfo}>
-        <h2>{title}</h2>
-        <label className={styles.tag} style={{color: ProjectStatusColors[state], borderColor:ProjectStatusColors[state],  }}>{state}</label>
+      <div className={styles.Image}>
+        <Image
+          src={img}
+          alt={title}
+          fill
+          style={{ borderRadius: "1rem", objectFit: "cover" }}
+        />
       </div>
-      <p>{resume}</p>
+      <div className={styles.info}>
+        <div className={styles.mainInfo}>
+          <h2>{title}</h2>
+          <label
+            className={styles.tag}
+            style={{
+              color: ProjectStatusColors[state],
+              borderColor: ProjectStatusColors[state],
+            }}
+          >
+            {state}
+          </label>
+        </div>
+        <p>{resume}</p>
+      </div>
     </div>
   );
 }
